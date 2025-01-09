@@ -1,34 +1,31 @@
-<div class="blog-post">
-    <header class="post-header">
-        <h1 class="post-title"><%= title %></h1>
-        <div class="post-meta">
-            <span class="post-date"><i class="far fa-calendar"></i> <%= date %></span>
-            <% if (typeof author !== 'undefined') { %>
-            <span class="post-author"><i class="far fa-user"></i> <%= author %></span>
-            <% } %>
-            <% if (typeof tags !== 'undefined' && tags.length > 0) { %>
-            <div class="post-tags">
-                <% tags.forEach(function(tag) { %>
-                    <a href="/tags/<%= tag %>" class="tag"><%= tag %></a>
-                <% }); %>
+<div class="blog-container">
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title"><%= title %></h1>
+            <div class="post-meta">
+                <span class="post-date"><%= date %></span>
+                <% if (typeof author !== 'undefined') { %>
+                • <span class="post-author"><%= author %></span>
+                <% } %>
             </div>
-            <% } %>
-        </div>
-    </header>
+        </header>
 
-    <article class="post-content">
-        <%- content %>
+        <% if (typeof heroImage !== 'undefined') { %>
+        <div class="post-hero-image">
+            <img src="<%= heroImage %>" alt="<%= title %>">
+        </div>
+        <% } %>
+
+        <div class="post-content">
+            <%- content %>
+        </div>
+
+        <% if (typeof tags !== 'undefined' && tags.length > 0) { %>
+        <div class="post-tags">
+            <% tags.forEach(function(tag) { %>
+                <a href="/tags/<%= tag %>" class="tag"><%= tag %></a>
+            <% }); %>
+        </div>
+        <% } %>
     </article>
-
-    <footer class="post-footer">
-        <div class="share-buttons">
-            <h3>Share this post</h3>
-            <a href="https://twitter.com/intent/tweet?text=<%= title %>&url=<%= url %>" target="_blank" class="share-button twitter">
-                <i class="fab fa-twitter"></i> Tweet
-            </a>
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url=<%= url %>&title=<%= title %>" target="_blank" class="share-button linkedin">
-                <i class="fab fa-linkedin"></i> Share
-            </a>
-        </div>
-    </footer>
 </div> 

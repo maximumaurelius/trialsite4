@@ -1,38 +1,40 @@
 ---
-title: Hello World - First Blog Post
-date: 2024-01-08
-author: Your Name
-tags: [blogging, introduction]
-description: Welcome to my first blog post where I share my thoughts on blogging and what's to come.
+title: "Hello World"
+description: "Welcome to my first blog post"
+date: "2024-01-01"
+heroImage: "/blog-placeholder-1.jpg"
+author: "Your Name"
 ---
 
-# Hello World!
+# Hello World
 
-Welcome to my first blog post. This is an example of how we can write content in Markdown and have it automatically converted to beautiful HTML.
+Welcome to my first blog post! This is a sample post to demonstrate the blog's functionality.
 
-## Why Markdown?
+## What's this about?
 
-Markdown is great for several reasons:
+This is a demonstration of the blog's markdown capabilities. You can write your posts using markdown syntax, which supports:
 
-1. **Simple to write** - No complex formatting needed
-2. **Easy to read** - Even in its raw form
-3. **Versatile** - Can be converted to many formats
-4. **Developer friendly** - Perfect for technical content
+- **Bold text** and *italic text*
+- Lists (like this one!)
+- [Links](https://example.com)
+- And much more
 
 ## Code Examples
 
-Here's an example of how we can include code:
+Here's a sample code block:
 
 ```javascript
 function greet(name) {
-    return `Hello, ${name}!`;
+    console.log(`Hello, ${name}!`);
 }
 ```
 
+## Images
+
+Images can be included in your posts and will be properly styled:
+
+![Sample Image](/blog-placeholder-1.jpg)
+
 ## What's Next?
 
-In upcoming posts, we'll explore:
-- Advanced blogging techniques
-- SEO optimization
-- Content strategy
-- And much more! 
+Stay tuned for more posts about interesting topics! 
